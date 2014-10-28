@@ -3,8 +3,8 @@
 describe('Dog', function() {
   var dog;
   beforeEach(function() {
-    dog = require('../lib/Dog');
-    dog.age=5;
+    dog = new Dog();
+    dog.age = 5;
   });
 
   describe("#age", function() {
@@ -21,7 +21,7 @@ describe('Dog', function() {
     it("should return an Integer", function(){
       expect(typeof dog.ageInYears()).toEqual('number');
     });
-    
+
     it("should return age", function() {
       expect(dog.ageInYears()).toEqual(5);
     });

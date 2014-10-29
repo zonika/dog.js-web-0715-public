@@ -3,8 +3,7 @@
 describe('Dog', function() {
   var dog;
   beforeEach(function() {
-    dog = new Dog('Buttons');
-    dog.age = 5;
+    dog = new Dog('Buttons', 5);
   });
 
   describe('name property', function() {
@@ -13,13 +12,13 @@ describe('Dog', function() {
     });
 
     it('should not share a name between to instances', function() {
-      var piper = new Dog('Piper');
+      var piper = new Dog('Piper', 3);
       expect(piper.name).toEqual('Piper');
       expect(dog.name).toEqual('Piper');
     });
   });
 
-  describe('#age', function() {
+  describe('age property', function() {
     it('should return an Integer', function(){
       expect(typeof dog.age).toEqual('number');
     });

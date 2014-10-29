@@ -14,7 +14,7 @@ describe('Dog', function() {
     it('should not share a name between to instances', function() {
       var piper = new Dog('Piper', 3);
       expect(piper.name).toEqual('Piper');
-      expect(dog.name).toEqual('Piper');
+      expect(dog.name).toEqual('Buttons');
     });
   });
 

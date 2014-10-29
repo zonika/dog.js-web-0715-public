@@ -61,6 +61,7 @@ arel.catchPhrase;
 ```
 
 As a note (and hint), `this` can be accessed inside prototypical methods too. However, unlike `self` `this` is ___explicit___, meaning it must be stated everytime you want to use it.
+
 ex.
 ```javascript
 function Person(catchPhrase){
@@ -68,16 +69,16 @@ function Person(catchPhrase){
 };
 
 Person.prototype.denyCatchPhrase = function(){
-  return "What!?! I never say, '" + this.catchPhrase + "'";
+  return "What!?! I like never say, '" + this.catchPhrase + "'";
 };
 
 var avi = new Person("That's so freakin' cool!");
 var arel = new Person("Boats!");
 
 avi.denyCatchPhrase();
-  // -> "What!?! I never say, 'That's so freakin' cool!'"
+  // -> "What!?! I like never say, 'That's so freakin' cool!'"
 arel.denyCatchPhrase();
-  // -> "What!?! I never say, 'Boats!'"
+  // -> "What!?! I like never say, 'Boats!'"
 ```
 
 

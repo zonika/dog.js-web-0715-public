@@ -39,12 +39,12 @@ arel.greet();
   // -> 'Hi!!!' 
 
 // Like a Ruby constant
-Person.prototype.species = 'Homo Sapien';
+Person.prototype.SPECIES = 'Homo Sapien';
 
 // Same property, same return value
-avi.species
+avi.SPECIES
   // -> 'Homo Sapien'
-arel.species
+arel.SPECIES
   // -> 'Homo Sapien'
 ```
 
